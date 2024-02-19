@@ -1,0 +1,13 @@
+package conta;
+
+import conta.model.Conta;
+
+public class Menu {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Conta c1 = new Conta(123456,123,1,"Douglas Lima de Queiroz", 2000.0f)
+	}
+
+}
