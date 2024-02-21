@@ -1,0 +1,42 @@
+package conta.model;
+
+public class ContaPoupanca extends Conta {
+
+	
+	
+	
+	public ContaPoupanca(int numero, int agencia, int tipo, String titular, float saldo) {
+		super(numero, agencia, tipo, titular, saldo);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public boolean sacar(float valor) {
+		    if (this.getSaldo() >= valor) {
+		        this.setSaldo(this.getSaldo() - valor);
+		        return true; 
+		    } else {
+		        return false; 
+		    }	
+
+	}
+
+	@Override
+	public void depositar(float valor) {
+		if(valor > 0) {
+			float newSaldo = this.getSaldo() + valor;
+			System.out.println("Saldo efetuado com sucesso");
+			System.out.println("Seu novo Saldo é: "+ newSaldo);
+		}
+		System.out.println("Impossivel depositar valores menores ou iguais a 0");
+		
+	}
+
+
+
+	
+	
+	
+
+
+}

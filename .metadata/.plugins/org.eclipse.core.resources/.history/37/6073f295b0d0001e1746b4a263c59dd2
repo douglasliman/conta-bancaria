@@ -1,0 +1,17 @@
+package conta;
+
+import conta.model.ContaCorrente;
+
+public class Menu {
+
+	public static void main(String[] args) {
+		
+		ContaCorrente c1 = new ContaCorrente(12345,002,2,"Douglas Queiroz", 2500.0f,400.0f);
+		
+		
+		c1.sacar(200);
+		
+		c1.visualizar();
+	}
+
+}

@@ -1,0 +1,22 @@
+package conta;
+
+import conta.model.Conta;
+
+public class Menu {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Conta conta1 = new Conta(123456,123,2,"Douglas Lima de Queiroz", 2000.0f);
+		
+		conta1.visualizar();
+		
+		
+		
+		conta1.setSaldo(4000.0f);
+		
+		conta1.visualizar();
+
+	}
+
+}

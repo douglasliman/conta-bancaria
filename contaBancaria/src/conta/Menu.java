@@ -1,47 +1,44 @@
 package conta;
 
-import conta.model.Conta;
+import conta.model.ContaCorrente;
 
 public class Menu {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
-		Conta conta1 = new Conta(123456,123,2,"Douglas Lima de Queiroz", 2000.0f);
+		ContaCorrente c1 = new ContaCorrente(12345,002,2,"Douglas Queiroz", 2500.0f,400.0f);
+	
+		System.out.println("Meu saldo é: " + c1.getSaldo());
 		
-		System.out.println("Número da conta");
-		System.out.println(conta1.getNumero());
-		System.out.println();
+		System.out.println("------------------------");
+		System.out.println("");
 		
-		System.out.println("Número da agencia");
-		System.out.println(conta1.getAgencia());
-		System.out.println();
+		c1.sacar(3000);
 		
-		System.out.println("Número da agencia");
-		System.out.println(conta1.getTipo());
-		System.out.println();
+		System.out.println("------------------------");
+		System.out.println("");
 		
-		if(conta1.getTipo() == 1) {
-			System.out.println("Conta poupança.");
-		}else if(conta1.getTipo() == 2) {
-			System.out.println("Conta Corrente.");
-		}else {
-			System.out.println("Conta Salário.");
-		}
-		System.out.println();
+		c1.visualizar();
 		
-		System.out.println("Nome do Titular");
-		System.out.println(conta1.getTitular());
-		System.out.println();
+		System.out.println("------------------------");
+		System.out.println("");
 		
-		System.out.println("Novo Saldo");
-		System.out.println(conta1.getSaldo());
-		System.out.println();
+		c1.sacar(2700);
 		
-		conta1.setSaldo(4000.0f);
-		System.out.println("Seu novo aldo é");
-		System.out.println(conta1.getSaldo());
-		System.out.println();
+		System.out.println("------------------------");
+		System.out.println("");
+		
+		c1.visualizar();
+		
+		System.out.println("------------------------");
+		System.out.println("");
+		
+		c1.depositar(2000);
+		
+		System.out.println("");
+		
+		System.out.println("------------------------");
+		c1.depositar(0);
 	}
 
 }

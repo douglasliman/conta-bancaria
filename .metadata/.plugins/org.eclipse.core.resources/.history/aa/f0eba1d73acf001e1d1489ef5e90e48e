@@ -1,0 +1,34 @@
+package conta;
+
+import conta.model.Conta;
+
+public class Menu {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Conta conta1 = new Conta(123456,123,2,"Douglas Lima de Queiroz", 2000.0f);
+		Conta conta2 = new Conta(32421,123,1,"Juliana Rodrigues", 2100.0f);
+		Conta conta3 = new Conta(122424,123,2,"Carolina Bosonz", 20300.0f);
+		
+		System.out.println("primeiro");
+		conta1.visualizar();
+		
+		if(conta1.sacarBoolean(100)) {
+			System.out.println("Saque efetuado com sucesso. O novo saldo é de: " + conta1.getSaldo() );
+		}else {
+			System.out.println("O saldo é infusiciente");
+		}
+		
+		
+	
+		conta1.sacarBoolean(200);
+		
+		conta1.visualizar();
+		
+		conta1.setSaldo(conta1.getSaldo()+  4000.0f);
+		
+
+	}
+
+}
