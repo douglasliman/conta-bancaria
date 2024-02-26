@@ -14,7 +14,7 @@ public class Menu {
 
 		Scanner leia = new Scanner(System.in);
 
-		int opcao, numero, agencia, tipo, numeroDestino;
+		int opcao, numero, agencia, tipo, aniversario, numeroDestino;
 		String titular;
 		float saldo, limite, valor;
 
@@ -38,7 +38,7 @@ public class Menu {
 
 		while (true) {
 
-			System.out.println(Cores.TEXT_GREEN + Cores.ANSI_WHITE_BACKGROUND
+			System.out.println(Cores.TEXT_GREEN + Cores.ANSI_BLACK_BACKGROUND_BRIGHT
 					+ "================================================================");
 			System.out.println("                                                     ");
 			System.out.println("                BANCO DO BUG                         ");
@@ -98,6 +98,8 @@ public class Menu {
 					contas.cadastrar(new ContaCorrente(contas.gerarNumero(), agencia, tipo, titular, saldo, limite));
 				}
 				case 2 -> {
+					System.out.println("Digite o dia do Aniversario da Conta: ");
+					aniversario = leia.nextInt();
 					contas.cadastrar(new ContaPoupanca(contas.gerarNumero(), agencia, tipo, titular, saldo));
 				}
 				}
@@ -149,6 +151,8 @@ public class Menu {
 						contas.atualizar(new ContaCorrente(numero, agencia, tipo, titular, saldo, limite));
 					}
 					case 2 -> {
+						System.out.println("Digite o dia do Aniversario da Conta: ");
+						aniversario = leia.nextInt();
 						contas.atualizar(new ContaPoupanca(numero, agencia, tipo, titular, saldo));
 					}
 					default -> {
@@ -217,7 +221,7 @@ public class Menu {
 				keyPress();
 				break;
 			default:
-				System.out.println(Cores.TEXT_GREEN + "\nOpção Inválida!\n");
+				System.out.println(Cores.TEXT_GREEN + "\nOpção Inválida!\n" + Cores.TEXT_RESET);
 				keyPress();
 				break;
 			}

@@ -38,7 +38,7 @@ public class Menu {
 
 		while (true) {
 
-			System.out.println(Cores.TEXT_GREEN + Cores.ANSI_WHITE_BACKGROUND
+			System.out.println(Cores.TEXT_GREEN + Cores.ANSI_BLACK_BACKGROUND_BRIGHT
 					+ "================================================================");
 			System.out.println("                                                     ");
 			System.out.println("                BANCO DO BUG                         ");
@@ -97,9 +97,7 @@ public class Menu {
 					limite = leia.nextFloat();
 					contas.cadastrar(new ContaCorrente(contas.gerarNumero(), agencia, tipo, titular, saldo, limite));
 				}
-				case 2 -> {
-					contas.cadastrar(new ContaPoupanca(contas.gerarNumero(), agencia, tipo, titular, saldo));
-				}
+				
 				}
 
 				keyPress();
@@ -149,6 +147,8 @@ public class Menu {
 						contas.atualizar(new ContaCorrente(numero, agencia, tipo, titular, saldo, limite));
 					}
 					case 2 -> {
+						System.out.println("Digite o dia do Aniversario da Conta: ");
+						aniversario = leia.nextInt();
 						contas.atualizar(new ContaPoupanca(numero, agencia, tipo, titular, saldo));
 					}
 					default -> {
@@ -217,7 +217,7 @@ public class Menu {
 				keyPress();
 				break;
 			default:
-				System.out.println(Cores.TEXT_GREEN + "\nOpção Inválida!\n");
+				System.out.println(Cores.TEXT_GREEN + "\nOpção Inválida!\n" + Cores.TEXT_RESET);
 				keyPress();
 				break;
 			}

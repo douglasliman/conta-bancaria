@@ -38,7 +38,7 @@ public class Menu {
 
 		while (true) {
 
-			System.out.println(Cores.TEXT_GREEN + Cores.ANSI_WHITE_BACKGROUND
+			System.out.println(Cores.TEXT_GREEN + Cores.ANSI_BLACK_BACKGROUND_BRIGHT
 					+ "================================================================");
 			System.out.println("                                                     ");
 			System.out.println("                BANCO DO BUG                         ");
