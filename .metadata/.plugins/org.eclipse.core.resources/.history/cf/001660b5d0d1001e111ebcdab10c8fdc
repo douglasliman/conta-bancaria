@@ -1,0 +1,7 @@
+package conta.contaController;
+
+import conta.repository.ContaRepository;
+
+public class ContaController implements ContaRepository  {
+
+}
